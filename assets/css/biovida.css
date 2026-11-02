@@ -1,0 +1,44 @@
+/* biovida.shop: una sola hoja, sin dependencias externas. */
+@font-face{font-family:'Fraunces';font-style:normal;font-weight:400 700;font-display:swap;src:url('../fonts/fraunces-latin.woff2') format('woff2')}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:300 800;font-display:swap;src:url('../fonts/manrope-latin.woff2') format('woff2')}
+:root{--hoja:#2f5d34;--hoja-honda:#1f3f24;--brote:#a9c77e;--crema:#f7f4ec;--arena:#ebe5d6;--tinta:#1e2a20;--tinta-suave:#56625a;--linea:rgba(31,63,36,.16)}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--crema);color:var(--tinta);font:400 1.0625rem/1.65 'Manrope','Helvetica Neue',Arial,sans-serif}
+a{color:var(--hoja)}
+a:focus-visible,.boton:focus-visible{outline:3px solid var(--brote);outline-offset:3px}
+.saltar{position:absolute;left:-999px;top:0;background:var(--tinta);color:#fff;padding:.6rem 1rem;z-index:10}
+.saltar:focus{left:1rem}
+.contenedor{max-width:1080px;margin:0 auto;padding:0 clamp(1.25rem,4vw,2.5rem)}
+.cabecera{border-bottom:1px solid var(--linea)}
+.cabecera-fila{max-width:1080px;margin:0 auto;padding:1.1rem clamp(1.25rem,4vw,2.5rem);display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.logotipo{font:600 1.35rem/1 'Fraunces',Georgia,serif;color:var(--hoja-honda);text-decoration:none;display:inline-flex;align-items:center;gap:.5rem}
+.logotipo svg{width:1.6rem;height:1.6rem}
+.menu a{font-weight:600;font-size:.95rem;text-decoration:none;color:var(--tinta)}
+.portada{padding:clamp(3.5rem,10vw,7.5rem) 0 clamp(3rem,8vw,6rem)}
+.etiqueta{font-size:.8125rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--hoja);margin:0 0 1rem}
+h1,h2{font-family:'Fraunces',Georgia,'Times New Roman',serif;color:var(--hoja-honda);letter-spacing:-.012em}
+h1{font-size:clamp(2.6rem,1.6rem + 5vw,5.25rem);font-weight:600;line-height:1.04;margin:0 0 1.5rem;max-width:14ch}
+h2{font-size:clamp(1.8rem,1.3rem + 2vw,2.6rem);font-weight:500;line-height:1.1;margin:0 0 1rem}
+.entradilla{font-size:clamp(1.15rem,1rem + .5vw,1.35rem);color:var(--tinta-suave);max-width:38ch;margin:0 0 2.2rem}
+.acciones{display:flex;flex-wrap:wrap;gap:.8rem}
+.boton{display:inline-block;padding:.9rem 1.5rem;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid var(--hoja)}
+.boton-lleno{background:var(--hoja);color:#fff}
+.boton-lleno:hover{background:var(--hoja-honda);border-color:var(--hoja-honda)}
+.boton-borde{color:var(--hoja)}
+.boton-borde:hover{background:var(--arena)}
+.franja{background:var(--hoja-honda);color:var(--crema);padding:clamp(3rem,8vw,5.5rem) 0}
+.franja h2{color:var(--crema)}
+.franja p{color:rgba(247,244,236,.82);max-width:52ch}
+.franja a{color:var(--brote)}
+.datos{list-style:none;padding:0;margin:1.5rem 0 0;display:grid;gap:.4rem;font-size:1.05rem}
+.datos b{color:var(--crema)}
+.pie{border-top:1px solid var(--linea);padding:1.8rem 0;font-size:.875rem;color:var(--tinta-suave)}
+.pie-fila{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem}
+.pie nav{display:flex;gap:1.2rem}
+.legal{padding:clamp(2.5rem,6vw,4.5rem) 0}
+.legal .contenedor{max-width:760px}
+.legal h1{font-size:clamp(2.2rem,1.6rem + 2.5vw,3.2rem);max-width:none}
+.legal h2{font-size:1.4rem;margin-top:2.2rem}
+@media (max-width:540px){.boton{width:100%;text-align:center}}
+@media (prefers-reduced-motion:no-preference){.boton{transition:background .15s}}
